@@ -1,0 +1,61 @@
+﻿<Page x:Class="UP02_Maykova.Pages.AddPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UP02_Maykova.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Наименование" Grid.Row="0" Grid.Column="0" Margin="10,0,0,0"/>
+        <TextBlock Text="Тип Компании" Grid.Row="1" Grid.Column="0" Margin="10,0,0,0"/>
+        <TextBlock Text="Рэйтинг" Grid.Row="2" Grid.Column="0" Margin="10,0,0,0"/>
+        <TextBlock Text="Адрес" Grid.Row="3" Grid.Column="0" Margin="10,0,0,0"/>
+        <TextBlock Text="Фамилия Директора" Grid.Row="4" Grid.Column="0" Margin="10,0,0,0"/>
+        <TextBlock Text="Имя Директора" Grid.Row="5" Grid.Column="0" Margin="10,0,0,0"/>
+        <TextBlock Text="Отчество Директора" Grid.Row="6" Grid.Column="0" Margin="10,0,0,0"/>
+        <TextBlock Text="Телефон" Grid.Row="7" Grid.Column="0" Margin="10,0,0,0"/>
+        <TextBlock Text="Email" Grid.Row="8" Grid.Column="0" Margin="10,0,0,0"/>
+
+
+        <TextBox ToolTip="Введите наименование компании" x:Name="TextBoxName" Text="{Binding Name}" Grid.Row="0" Grid.Column="1"/>
+
+        <ComboBox x:Name="TypeBox" DisplayMemberPath="Name_Type" Grid.Row="1" Grid.Column="1" ToolTip="Выберите тип компании"/>
+
+        <TextBox ToolTip="Введите тип компании" x:Name="RatingBox"  Text="{Binding Rating}" Grid.Row="2" Grid.Column="1"/>
+
+        <TextBox ToolTip="Введите Адрес" x:Name="TextBoxAdress" Text="{Binding Adress}" Grid.Row="3" Grid.Column="1"/>
+
+        <TextBox ToolTip="Введите Фамилию" x:Name="TextBoxSecond" Text="{Binding Director_name}" Grid.Row="4" Grid.Column="1"/>
+
+        <TextBox ToolTip="Введите Имя" x:Name="TextBoxFirst" Text="{Binding Director_middle_name}" Grid.Row="5" Grid.Column="1"/>
+
+        <TextBox ToolTip="Введите Отчество" x:Name="TextBoxThird" Text="{Binding Director_last_name}" Grid.Row="6" Grid.Column="1"/>
+
+        <TextBox ToolTip="Введите контактный телефон" x:Name="TextBoxPhone" Text="{Binding Phone}" Grid.Row="7" Grid.Column="1"/>
+
+        <TextBox ToolTip="Введите адрес электронной почты" x:Name="TextBoxEmail" Text="{Binding Email}" Grid.Row="8" Grid.Column="1"/>
+
+        <Button Name="ButtonSave" Content="Добавить" Grid.Row="9" Click="ButtonSave_Click" Grid.ColumnSpan="2" Margin="0,0,50,0" HorizontalAlignment="Right"/>
+        <Button Name="ButtonRedact" Content="Сохранить" Grid.Row="9" Click="ButtonRedact_Click" Grid.ColumnSpan="2" Margin="0,0,50,0" HorizontalAlignment="Center"/>
+
+    </Grid>
+</Page>

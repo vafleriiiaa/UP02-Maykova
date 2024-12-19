@@ -1,0 +1,40 @@
+﻿<Page x:Class="UP02_Maykova.Pages.Product"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UP02_Maykova.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Product">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="400*"/>
+
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="1" Name="DataGridRealise" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Партнёр" Binding="{Binding Partners.Name}" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Продукция" Binding="{Binding Products.Name_products}" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Количество реализованного" Binding="{Binding Num_of_products}" Width="*"/>
+                <DataGridTextColumn Header="Дата реализации" Binding="{Binding Date_of_sale}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock x:Name="Partner" Width="200" HorizontalAlignment="Center"/>
+
+    </Grid>
+</Page>
