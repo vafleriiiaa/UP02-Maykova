@@ -98,8 +98,8 @@ namespace UP02_Maykova.Pages
 
             if (string.IsNullOrWhiteSpace(_currentPartners.Name))
                 errors.AppendLine("Укажите Название компании!");
-            if (string.IsNullOrWhiteSpace(Convert.ToString(_currentPartners.Rating)))
-                errors.AppendLine("Укажите Рэйтинг!");
+            if (string.IsNullOrWhiteSpace(Convert.ToString(_currentPartners.Rating)) || _currentPartners.Rating < 0)
+                errors.AppendLine("Укажите укажите правильный рейтинг!");
             if ((_currentPartners.Type == 0) || (TypeBox.Text == ""))
                 errors.AppendLine("Выберите тип компании!");
             else

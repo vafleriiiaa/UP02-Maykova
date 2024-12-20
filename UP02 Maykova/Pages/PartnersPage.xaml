@@ -13,7 +13,7 @@
             <RowDefinition Height="378"/>
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
-        <ListView  Name="ListPartners" Grid.Row="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListPartners_SelectionChanged" >
+        <ListView  Name="ListPartners" Grid.Row="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" d:ItemsSource="{d:SampleData ItemCount=5}">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"></WrapPanel>
@@ -55,5 +55,7 @@ HorizontalAlignment="Center" FontSize="18" Text="{Binding Ratin}"/>
             </ListView.ItemTemplate>
         </ListView>
         <Button x:Name="Add" Grid.Row="1" Content="Добавить" ToolTip="Добавить элемент в базу" Height="40" HorizontalAlignment="Right" Click="Add_Click"/>
+        <Button x:Name="Realise" Grid.Row="1" Content="История" ToolTip="Просмотреть историю партнёра" Height="40" HorizontalAlignment="Left" Click="Realise_Click"/>
+        <Button x:Name="Redact" Grid.Row="1" Content="Редактировать" ToolTip="Отредактировать элемент базы" Height="40" HorizontalAlignment="center" Click="Redact_Click"/>
     </Grid>
 </Page>
